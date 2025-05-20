@@ -40,7 +40,7 @@ function updateFeaturedMovie(index) {
     featuredInfo.querySelector('.seasons').textContent = movie.seasons;
     featuredInfo.querySelector('.cast').innerHTML = `<strong>Cast:</strong> ${movie.cast}`;
     featuredInfo.querySelector('.genre').innerHTML = `<strong>Genre:</strong> ${movie.genre}`;
-    featuredInfo.querySelector('.description').innerHTML = `<strong>Description:</strong> ${movie.description}`;
+    featuredInfo.querySelector('.description').innerHTML = `${movie.description}`;
     featuredImage.style.backgroundImage = `url('${movie.image}')`;
     featuredImage.style.backgroundColor = movie.color;
 

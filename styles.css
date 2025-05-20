@@ -148,16 +148,24 @@ body {
     margin-bottom: 15px;
 }
 
-.featured-info .cast,
+.featured-info .cast {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
 .featured-info .genre {
     margin-bottom: 10px;
     font-size: 14px;
 }
 
-.featured-info .description {
+.featured-info .info-description {
     font-size: 14px;
+    padding-bottom: 4px;
+}
+
+.featured-info .description {
+    font-size: 12px;
     line-height: 1.5;
-    color: #bbb;
+    color: #bebebe;
 }
 
 .featured-controls {
@@ -179,15 +187,22 @@ body {
     width: 32px;
     height: 6px;
     background-color: #777;
-    border-radius: 10px;
+    border-radius: 12px;
     border-style: none;
     margin: 0 5px;
     cursor: pointer;
 }
 
+.dot:hover {
+    background-color: #8f8f8f;
+}
+
 .dot.active {
     width: 64px;
     background-color: #f3f3f3;
+}
+.dot.active:hover {
+    background-color: #cccccc;
 }
 
 .next-button {
@@ -291,7 +306,6 @@ body {
     border: none;
     border-radius: 50%;
     cursor: pointer;
-    background-image: url('../videoHub/images/icons/play_button.png');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
