@@ -23,7 +23,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px 0;
-    border-bottom: 1px solid #9c0202;
+    border-bottom: 1px solid #978A74;
 }
 
 .logo h1 {
@@ -286,7 +286,7 @@ body {
     align-items: center;
     padding: 30px 0;
     margin-top: 40px;
-    border-top: 1px solid #9c0202;
+    border-top: 1px solid #978A74;
     text-align: center;
 }
 
