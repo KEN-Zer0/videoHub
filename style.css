@@ -7,7 +7,11 @@
 }
 
 body {
+<<<<<<< HEAD
     background-color: #272727;
+=======
+    background-color: #2b2424;
+>>>>>>> Testing-Prototypes
     color: #fff;
 }
 
@@ -33,7 +37,11 @@ body {
 
 .search-container {
     display: flex;
+<<<<<<< HEAD
     background-color: #3f3f3f;
+=======
+    background-color: #4e4e4e;
+>>>>>>> Testing-Prototypes
     border-radius: 20px;
     overflow: hidden;
     width: 300px;
