@@ -262,8 +262,8 @@ body {
     width: 100%;
     aspect-ratio: 3/4;
     position: relative;
-    border-top-left-radius: 10%;
-    border-top-right-radius: 10%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
 
 .movie-info {
@@ -274,6 +274,10 @@ body {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 10px;
     color: white;
+    transition: height 0.25s ease-in;
+    transform-origin: bottom;
+    height: 70px;
+    overflow: hidden;
 }
 
 .movie-info:hover {
@@ -284,6 +288,7 @@ body {
     background-color: rgba(0, 0, 0, 0.75);
     padding: 10px;
     color: white;
+    height: 216px;
 }
 
 .movie-info h3 {
@@ -375,8 +380,52 @@ body {
 
 /* Responsive Hiding */
 @media (max-width: 768px) {
-    .movie-slider .movie-card:nth-child(n+3) {
+    .movie-slider {
+        justify-content: center;
+        gap: 10px;
+        padding: 10px;
+    }
+    
+    .movie-slider .movie-card {
+        flex: 0 0 calc(50% - 10px);
+        max-width: calc(50% - 10px);
         display: none;
+    }
+    
+    .movie-slider .movie-card:nth-child(-n+2) {
+        display: block;
+    }
+    
+    @media (max-width: 480px) {
+        .movie-slider .movie-card {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+        
+        .movie-slider .movie-card:nth-child(-n+1) {
+            display: block;
+        }
+        
+        .movie-slider .movie-card:nth-child(n+2) {
+            display: none;
+        }
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .movie-slider .movie-card {
+        flex: 0 0 calc(33.333% - 15px);
+        max-width: calc(33.333% - 15px);
+    }
+    
+    .movie-slider .movie-card:nth-child(n+4) {
+        display: none;
+    }
+}
+
+@media (min-width: 1025px) {
+    .movie-slider .movie-card {
+        flex: 0 0 192px;
     }
 }
 
