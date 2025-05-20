@@ -297,6 +297,10 @@ body {
     background-repeat: no-repeat;
 }
 
+.play-button:hover {
+    background-color: #665d4f;
+}
+
 .slider-arrow {
     position: absolute;
     top: 50%;
