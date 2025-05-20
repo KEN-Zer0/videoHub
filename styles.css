@@ -260,7 +260,7 @@ body {
 
 .placeholder-image {
     width: 100%;
-    aspect-ratio: 4/3;
+    aspect-ratio: 3/4;
     position: relative;
     border-top-left-radius: 10%;
     border-top-right-radius: 10%;
