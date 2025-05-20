@@ -330,6 +330,14 @@ body {
     background-color: #f39c12; /* Pomarańczowy */
 }
 
+.movie-slider .movie-card:nth-child(4) .placeholder-image {
+    background-color: #2ecc71; /* Jasnozielony */
+}
+
+.movie-slider .movie-card:nth-child(5) .placeholder-image {
+    background-color: #c0392b; /* Ciemnoczerwony */
+}
+
 /* Komentarze dla zdjęć */
 .placeholder-image::before {
     content: attr(data-image-label);
@@ -357,6 +365,14 @@ body {
     content: "Zdjęcie 4 - Doctor Strange";
 }
 
+.movie-slider .movie-card:nth-child(4) .placeholder-image::before {
+    content: "Zdjęcie 8 - The Matrix";
+}
+
+.movie-slider .movie-card:nth-child(5) .placeholder-image::before {
+    content: "Zdjęcie 9 - Inception";
+}
+
 /* Sekcja Comedy - inne kolory */
 .section:nth-of-type(2) .movie-card:nth-child(1) .placeholder-image {
     background-color: #3498db; /* Niebieski */
@@ -370,6 +386,14 @@ body {
     background-color: #16a085; /* Morski */
 }
 
+.section:nth-of-type(2) .movie-card:nth-child(4) .placeholder-image {
+    background-color: #e67e22; /* Pomarańczowy */
+}
+
+.section:nth-of-type(2) .movie-card:nth-child(5) .placeholder-image {
+    background-color: #1abc9c; /* Turkusowy */
+}
+
 .section:nth-of-type(2) .movie-card:nth-child(1) .placeholder-image::before {
     content: "Zdjęcie 5 - Spy";
 }
@@ -380,4 +404,12 @@ body {
 
 .section:nth-of-type(2) .movie-card:nth-child(3) .placeholder-image::before {
     content: "Zdjęcie 7 - Central Intelligence";
+}
+
+.section:nth-of-type(2) .movie-card:nth-child(4) .placeholder-image::before {
+    content: "Zdjęcie 10 - The Hangover";
+}
+
+.section:nth-of-type(2) .movie-card:nth-child(5) .placeholder-image::before {
+    content: "Zdjęcie 11 - Superbad";
 }
