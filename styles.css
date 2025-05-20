@@ -31,6 +31,17 @@ body {
     font-weight: bold;
 }
 
+.logo-title {
+    color: white;
+    text-decoration: none;
+}
+
+.logo-title:hover {
+    color: #ffffffb0;
+    
+    text-decoration: underline;
+}
+
 .search-container {
     display: flex;
     background-color: #3f3f3f;
@@ -151,7 +162,7 @@ body {
 
 .featured-controls {
     position: absolute;
-    bottom: 20px;
+    bottom: 12px;
     left: 0;
     right: 0;
     display: flex;
@@ -165,29 +176,37 @@ body {
 }
 
 .dot {
-    width: 8px;
-    height: 8px;
-    background-color: #555;
-    border-radius: 50%;
+    width: 32px;
+    height: 6px;
+    background-color: #777;
+    border-radius: 10px;
+    border-style: none;
     margin: 0 5px;
     cursor: pointer;
 }
 
 .dot.active {
-    background-color: #fff;
+    width: 64px;
+    background-color: #f3f3f3;
 }
 
 .next-button {
     background-color: rgba(255, 255, 255, 0.2);
     border: none;
     color: white;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
+    font-weight: 700;
+    width: 64px;
+    height: 32px;
+    border-radius: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
+}
+
+.next-button:hover {
+    background-color: rgba(255, 255, 255, 0.35);
+    border: 1px solid #FFFFFF44;
 }
 
 /* Section Styling */
@@ -228,6 +247,8 @@ body {
     width: 100%;
     aspect-ratio: 4/3;
     position: relative;
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
 }
 
 .movie-info {
@@ -236,6 +257,16 @@ body {
     left: 0;
     right: 0;
     background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    color: white;
+}
+
+.movie-info:hover {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.75);
     padding: 10px;
     color: white;
 }
@@ -270,7 +301,19 @@ body {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.1);
+    border: none;
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.slider-arrow:hover{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.3);
     border: none;
     color: white;
     font-size: 24px;

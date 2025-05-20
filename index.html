@@ -13,7 +13,7 @@
     <div class="container">
         <div class="topbar">
             <div class="logo">
-                <h1>FilmHub</h1>
+                <h1><a href="index.html" class="logo-title">FilmHub</a></h1>
             </div>
             <div class="search-container">
                 <input type="text" class="search-input" placeholder="Search...">
@@ -38,7 +38,7 @@
             <div class="featured-controls">
                 <div class="nav-dots">
                     <button class="dot active"></button>
-                    <button class="dot"></button>
+                    <button class="dot"> </button>
                     <button class="dot"></button>
                 </div>
                 <button class="next-button">Next</button>
@@ -437,50 +437,11 @@
             </div>
         </section>
 
->>>>>>> Testing-Prototypes
         <div class="footer">
             <p>We are always ready to help you.</p>
             <button class="ask-button">Ask a question</button>
         </div>
     </div>
-<<<<<<< HEAD
-
-    <script>
-        // Simulate user login state
-        const isLoggedIn = false;
-
-        // Get dropdown menu element
-        const accountDropdown = document.getElementById('accountDropdown');
-        const userButton = document.querySelector('.user-button');
-
-        // Populate dropdown menu based on login state
-        if (isLoggedIn) {
-            accountDropdown.innerHTML = `
-                <a href="#">Moje konto</a>
-                <a href="#">Ustawienia</a>
-                <a href="#">Wyloguj</a>
-            `;
-        } else {
-            accountDropdown.innerHTML = `
-                <a href="#">Zaloguj</a>
-                <a href="#">Zarejestruj</a>
-            `;
-        }
-
-        // Toggle dropdown menu visibility
-        userButton.addEventListener('click', () => {
-            accountDropdown.classList.toggle('show');
-        });
-
-        // Close dropdown when clicking outside
-        document.addEventListener('click', (event) => {
-            if (!userButton.contains(event.target) && !accountDropdown.contains(event.target)) {
-                accountDropdown.classList.remove('show');
-            }
-        });
-    </script>
-=======
     <script src="script.js"></script>
->>>>>>> Testing-Prototypes
 </body>
 </html>
