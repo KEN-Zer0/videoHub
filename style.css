@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: #121212;
+    background-color: #2b2424;
     color: #fff;
 }
 
@@ -33,7 +33,7 @@ body {
 
 .search-container {
     display: flex;
-    background-color: #222;
+    background-color: #4e4e4e;
     border-radius: 20px;
     overflow: hidden;
     width: 300px;
