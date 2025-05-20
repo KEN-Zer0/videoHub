@@ -1,184 +1,83 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FilmHub</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #121212;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #1f1f1f;
+        }
+        .header h1 {
+            margin: 0;
+        }
+        .header input {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+        }
+        .section {
+            padding: 20px;
+        }
+        .movie {
+            margin: 10px 0;
+        }
+        footer {
+            padding: 20px;
+            background-color: #1f1f1f;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Top Bar -->
-        <div class="topbar">
-            <div class="logo">
-                <h1>FilmHub</h1>
-            </div>
-            <div class="search-container">
-                <input type="text" placeholder="Search" class="search-input">
-                <button class="search-button"><i class="fas fa-search"></i></button>
-            </div>
-            <div class="user-account">
-                <div class="user-button" onclick="toggleDropdown()">
-                    <i class="fas fa-user"></i>
-                </div>
-                <div class="dropdown-menu" id="accountDropdown">
-                    <?php
-                    $isLoggedIn = false; // Zmień na true, aby zasymulować zalogowanego użytkownika
-                    
-                    if ($isLoggedIn) {
-                        echo '<a href="#">Moje konto</a>';
-                        echo '<a href="#">Ustawienia</a>';
-                        echo '<a href="#">Wyloguj</a>';
-                    } else {
-                        echo '<a href="#">Zaloguj</a>';
-                        echo '<a href="#">Zarejestruj</a>';
-                    }
-                    ?>
-                </div>
-            </div>
+    <div class="header">
+        <h1>FilmHub</h1>
+        <input type="text" placeholder="Search...">
+    </div>
+    <div class="section featured">
+        <h2>Supernatural</h2>
+        <p>14+ seasons (2005-2020)</p>
+        <p>Cast: [Names are blurred]</p>
+        <p>Genre: Horror, Action, Sci-fi</p>
+    </div>
+    <div class="section continue-watching">
+        <h2>Continue Watching</h2>
+        <div class="movie">
+            <p>Fast & Furious (2019) – 136 min</p>
         </div>
-
-        <!-- Featured Movie -->
-        <div class="featured-movie">
-            <div class="featured-info">
-                <h2>Supernatural</h2>
-                <p class="seasons">1-15 seasons (2005-2020)</p>
-                <p class="cast">
-                    <strong>Cast:</strong> Jensen Ackles (Dean Winchester), 
-                    Jared Padalecki (Sam Winchester)
-                </p>
-                <p class="genre"><strong>Genre:</strong> Horror, Action, Sci-Fi</p>
-                <p class="description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, cras sagittis magna vel lectus vestibulum, vitae consectetur sapien ultrices. Ut accumsan sapien et sodales porttitor. Curabitur nec diam ac libero, at tincidunt diam cursus id. Sed euismod felis et porta tincidunt. 
-                    Fusce at tincidunt dolor. Vivamus eu velit sodales, et ultricies lectus quis, accumsan placerat.
-                </p>
-            </div>
-            <!-- Zdjęcie 1 - Featured Movie -->
-            <div class="featured-image">
-                <div class="placeholder-image"></div>
-                <div class="featured-controls">
-                    <div class="nav-dots">
-                        <span class="dot active"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                    </div>
-                    <button class="next-button"><i class="fas fa-chevron-right"></i></button>
-                </div>
-            </div>
+        <div class="movie">
+            <p>Spiderman no... (2021) – 148 min</p>
         </div>
-
-        <!-- Continue Watching -->
-        <div class="section">
-            <h2 class="section-title">Countinue watching</h2>
-            <div class="slider-container">
-                <button class="slider-arrow left"><i class="fas fa-chevron-left"></i></button>
-                <div class="movie-slider">
-                    <!-- Zdjęcie 2 - Fast & Furious -->
-                    <div class="movie-card">
-                        <div class="placeholder-image">
-                            <!-- Zdjecie 2 - Fast & Furious -->
-                        </div>
-                        <div class="movie-info">
-                            <h3>Fast & Furious (2001)</h3>
-                            <p>127 min</p>
-                            <div class="play-button"><i class="fas fa-play"></i></div>
-                        </div>
-                    </div>
-                    <!-- Zdjecie 3 - Spider-man -->
-                    <div class="movie-card">
-                        <div class="placeholder-image">
-                            <!-- Zdjecie 3 - Spider-man -->
-                        </div>
-                        <div class="movie-info">
-                            <h3>Spider-man (... 2021)</h3>
-                            <p>148 min</p>
-                            <div class="play-button"><i class="fas fa-play"></i></div>
-                        </div>
-                    </div>
-                    <!-- Zdjecie 4 - Doctor Strange -->
-                    <div class="movie-card">
-                        <div class="placeholder-image">
-                            <!-- Zdjecie 4 - Doctor Strange -->
-                        </div>
-                        <div class="movie-info">
-                            <h3>Doctor Strange (2016)</h3>
-                            <p>115 min</p>
-                            <div class="play-button"><i class="fas fa-play"></i></div>
-                        </div>
-                    </div>
-                </div>
-                <button class="slider-arrow right"><i class="fas fa-chevron-right"></i></button>
-            </div>
-        </div>
-
-        <!-- Comedy -->
-        <div class="section">
-            <h2 class="section-title">Comedy</h2>
-            <div class="slider-container">
-                <button class="slider-arrow left"><i class="fas fa-chevron-left"></i></button>
-                <div class="movie-slider">
-                    <!-- Zdjęcie 5 - Spy -->
-                    <div class="movie-card">
-                        <div class="placeholder-image">
-                            <!-- Zdjecie 5 - Spy -->
-                        </div>
-                        <div class="movie-info">
-                            <h3>Spy (2001)</h3>
-                            <p>120 min</p>
-                            <div class="play-button"><i class="fas fa-play"></i></div>
-                        </div>
-                    </div>
-                    <!-- Zdjęcie 6 - Pixels -->
-                    <div class="movie-card">
-                        <div class="placeholder-image">
-                            <!-- Zdjecie 6 - Pixels -->
-                        </div>
-                        <div class="movie-info">
-                            <h3>Pixels (2021)</h3>
-                            <p>110 min</p>
-                            <div class="play-button"><i class="fas fa-play"></i></div>
-                        </div>
-                    </div>
-                    <!-- Zdjęcie 7 - Central Intelligence -->
-                    <div class="movie-card">
-                        <div class="placeholder-image">
-                            <!-- Zdjecie 7 - Central Intelligence -->
-                        </div>
-                        <div class="movie-info">
-                            <h3>Central Intel... (2016)</h3>
-                            <p>114 min</p>
-                            <div class="play-button"><i class="fas fa-play"></i></div>
-                        </div>
-                    </div>
-                </div>
-                <button class="slider-arrow right"><i class="fas fa-chevron-right"></i></button>
-            </div>
-        </div>
-
-        <!-- Footer -->
-        <div class="footer">
-            <p>We are always ready to help you.</p>
-            <button class="ask-button">Ask a question</button>
+        <div class="movie">
+            <p>Doctor Strange (2016) – 115 min</p>
         </div>
     </div>
-
-    <script>
-        function toggleDropdown() {
-            var dropdown = document.getElementById("accountDropdown");
-            dropdown.classList.toggle("show");
-        }
-
-        // Zamykanie dropdown menu po kliknięciu poza nim
-        window.onclick = function(event) {
-            if (!event.target.matches('.user-button') && !event.target.matches('.fa-user')) {
-                var dropdown = document.getElementById("accountDropdown");
-                if (dropdown.classList.contains('show')) {
-                    dropdown.classList.remove('show');
-                }
-            }
-        }
-    </script>
+    <div class="section comedy">
+        <h2>Comedy</h2>
+        <div class="movie">
+            <p>Spy (2015) – 120 min</p>
+        </div>
+        <div class="movie">
+            <p>Pixels (2015) – 105 min</p>
+        </div>
+        <div class="movie">
+            <p>Central Intelligence (2016)</p>
+        </div>
+    </div>
+    <footer>
+        <p>We are always ready to help you.</p>
+        <p>Ask a question.</p>
+    </footer>
 </body>
 </html>
