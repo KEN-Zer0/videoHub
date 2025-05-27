@@ -62,3 +62,45 @@ dots.forEach((dot, index) => {
 });
 
 updateFeaturedMovie(0);
+
+const userButton = document.querySelector('.user-button');
+const dropdownMenu = document.getElementById('accountDropdown');
+
+// Funkcja do tworzenia zawartości dropdown menu
+function createDropdownMenu() {
+    dropdownMenu.innerHTML = `
+        <a href="#">Moje konto</a>
+        <hr></hr>
+        <a href="#" class="logout">Wyloguj</a>
+    `;
+    
+    // Dodajemy styl do logout linku
+    const logoutLink = dropdownMenu.querySelector('.logout');
+    logoutLink.style.color = '#e74c3c';
+}
+
+// Funkcja do pokazywania/ukrywania dropdown menu
+function toggleDropdown() {
+    dropdownMenu.classList.toggle('show');
+}
+
+// Inicjalizacja dropdown menu przy ładowaniu strony
+document.addEventListener('DOMContentLoaded', () => {
+    createDropdownMenu();
+    
+    // Nasłuchiwanie kliknięcia na przycisk użytkownika
+    userButton.addEventListener('click', (e) => {
+        e.stopPropagation(); // Zapobiega natychmiastowemu zamknięciu
+        toggleDropdown();
+    });
+    
+    // Zamknięcie dropdown po kliknięciu gdziekolwiek indziej
+    document.addEventListener('click', () => {
+        dropdownMenu.classList.remove('show');
+    });
+    
+    // Zapobieganie zamknięciu po kliknięciu w dropdown
+    dropdownMenu.addEventListener('click', (e) => {
+        e.stopPropagation();
+    });
+});
