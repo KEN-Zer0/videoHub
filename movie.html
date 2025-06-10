@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FilmHub</title>
+  <link
+    rel="stylesheet"
+    href="style.css"
+  />
+  <link
+    rel="stylesheet"
+    href="main.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+</head>
+<body>
+  <div class="container">
+    <!-- Menu (topbar) -->
+    <div class="topbar">
+      <div class="logo">
+        <h1><a href="main.html">FilmHub</a></h1>
+      </div>
+      <div class="search-container">
+        <input type="text" placeholder="Search" class="search-input" />
+        <button class="search-button">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+      <div class="user-account">
+        <div class="user-button" onclick="toggleDropdown()">
+          <i class="fas fa-user"></i>
+        </div>
+        <div class="dropdown-menu" id="accountDropdown">
+          <!-- PHP generowane linki -->
+          <a href="settings.html">Settings</a>
+          <a href="#" id="loginLink">Log in</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Główna zawartość -->
+    <div class="header">
+      <div class="thumbnail"></div>
+      <div class="details">
+        <h1>Movie Title</h1><br></br>
+        <p id="description">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+          <span id="moreText">
+            Vivamus lacinia odio vitae vestibulum vestibulum. Curabitur euismod, nunc vel consectetur cursus, nisl erat ullamcorper odio, in fringilla orci tortor a nulla.Vivamus lacinia odio vitae vestibulum vestibulum. Curabitur euismod, nunc vel consectetur cursus, nisl erat ullamcorper odio, in fringilla orci tortor a nulla.Vivamus lacinia odio vitae vestibulum vestibulum. Curabitur euismod, nunc vel consectetur cursus, nisl erat ullamcorper odio, in fringilla orci tortor a nulla.
+          </span>
+        </p>
+        <button class="button" id="viewAllBtn">View more</button>
+    
+        <!-- Przeniesiony div info-grid tutaj -->
+        <div class="info-grid">
+          <div>
+            <p><strong>Year of release:</strong> Lorem</p>
+            <p><strong>Directed by:</strong> Ipsum Dolor</p>
+            <p><strong>Category:</strong> Lorem</p>
+            <p><strong>Genre:</strong> Dolor</p>
+            <p><strong>Translation:</strong> Lorem, Ipsum</p>
+          </div>
+          <div>
+            <p>
+              <strong>Cast:</strong> Lorem, Ipsum, Dolor, Sit, Amet, Consectetur,
+              Adipiscing, Elit
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="video-player">
+      <div class="playfilm-button"></div>
+    </div>
+
+    <div class="comments">
+        <input type="text" placeholder="Enter Comment" />
+        <button class="send-button">Send</button>
+      </div>
+      
+
+    <!-- You might like to watch -->
+    <div class="section">
+        <h2 class="section-title">You might like to watch</h2>
+        <div class="slider-container">
+          <button class="slider-arrow left-arrow">❮</button>
+          <div class="movie-slider">
+              <div class="movie-card">
+                  <div class="placeholder-image" style="background-color: #e74c3c;">
+                      <div class="movie-info">
+                          <h3>Fast & Furious (2001)</h3>
+                          <p>127 min</p>
+                      </div>
+                      <a href="movie.html" class="play-button"></a>
+                  </div>
+              </div>
+              <div class="movie-card">
+                  <div class="placeholder-image" style="background-color: #2ecc71;">
+                      <div class="movie-info">
+                          <h3>Avengers (2012)</h3>
+                          <p>143 min</p>
+                      </div>
+                      <button class="play-button"></button>
+                  </div>
+              </div>
+              <div class="movie-card">
+                  <div class="placeholder-image" style="background-color: #3498db;">
+                      <div class="movie-info">
+                          <h3>Barbie (2023)</h3>
+                          <p>114 min</p>
+                      </div>
+                      <button class="play-button"></button>
+                  </div>
+              </div>
+              <div class="movie-card">
+                  <div class="placeholder-image" style="background-color: #f1c40f;">
+                      <div class="movie-info">
+                          <h3>Shrek (2001)</h3>
+                          <p>90 min</p>
+                      </div>
+                      <button class="play-button"></button>
+                  </div>
+              </div>
+              <div class="movie-card">
+                  <div class="placeholder-image" style="background-color: #c0392b;">
+                      <div class="movie-info">
+                          <h3>Inception (2010)</h3>
+                          <p>148 min</p>
+                      </div>
+                      <button class="play-button"></button>
+                  </div>
+              </div>
+          </div>
+          <button class="slider-arrow right-arrow">❯</button>
+      </div>
+  </section>
+
+  <div class="form-overlay" id="formOverlay">
+    <div class="form-container">
+      <div class="glass-card">
+        <button class="close-btn" id="closeFormBtn">&times;</button>
+        <form class="artist-form">
+          <div class="form-columns">
+            <div class="column">
+              <input type="text" name="pseudonym" placeholder="Nickname" class="input-field" />
+              <input type="text" name="fullname" placeholder="Name" class="input-field" />
+              <input type="text" name="surname" placeholder="Surname" class="input-field" />
+              <input type="email" name="email" placeholder="E-mail" class="input-field" />
+              <input type="tel" name="phone" placeholder="Telephone number" class="input-field" />
+            </div>
+            <div class="column">
+              <input type="text" name="country" placeholder="Country" class="input-field" />
+              <input type="text" name="gender" placeholder="Płeć" class="input-field" />
+              <input type="text" name="genre" placeholder="Favorite movie genre" class="input-field" />
+              <textarea name="description" placeholder="Write about yourself" class="input-field" rows="5"></textarea>
+            </div>
+          </div>
+          <button type="submit" class="ask-button">Send</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+
+    <!-- Footer -->
+    <div class="footer">
+      <p>We are always ready to help you.</p>
+      <button class="ask-button">Ask a question</button>
+  </div>
+  </div>
+
+  <script>
+    function toggleDropdown() {
+      var dropdown = document.getElementById("accountDropdown");
+      dropdown.classList.toggle("show");
+    }
+
+    // Zamykanie dropdown menu po kliknięciu poza nim
+    window.onclick = function (event) {
+      if (
+        !event.target.matches(".user-button") &&
+        !event.target.matches(".fa-user")
+      ) {
+        var dropdown = document.getElementById("accountDropdown");
+        if (dropdown.classList.contains("show")) {
+          dropdown.classList.remove("show");
+        }
+      }
+    };
+
+    const btn = document.getElementById('viewAllBtn');
+    const moreText = document.getElementById('moreText');
+
+    btn.addEventListener('click', () => {
+    if (moreText.classList.contains('show')) {
+        moreText.classList.remove('show');
+        btn.textContent = 'View more';
+    } else {
+        moreText.classList.add('show');
+        btn.textContent = 'View less';
+    }
+    });
+    const loginLink = document.getElementById('loginLink');
+    const formOverlay = document.getElementById('formOverlay');
+    const closeFormBtn = document.getElementById('closeFormBtn');
+   
+    loginLink.addEventListener('click', (e) => {
+      e.preventDefault();      // blokujemy domyślną akcję linku (przejście)
+      formOverlay.style.display = 'flex';
+          });
+
+    closeFormBtn.addEventListener('click', () => {
+       formOverlay.style.display = 'none';
+     });
+
+    window.addEventListener('click', (e) => {
+      if (e.target === formOverlay) {
+        formOverlay.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>
